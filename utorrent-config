@@ -103,34 +103,14 @@ main_useful_apps() {
 do_update() {
 
     wget http://download.utorrent.com/linux/utorrent-server-3.0-25053.tar.gz
-<<<<<<< HEAD
-<<<<<<< HEAD
-    tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
-    chmod -R 777 /opt/utorrent-server-v3_0/
-    ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
-=======
     sudo tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
     sudo chmod -R 777 /opt/utorrent-server-v3_0/
     sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
->>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
-=======
-    sudo tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
-    sudo chmod -R 777 /opt/utorrent-server-v3_0/
-    sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
->>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
     
 }
 
 do_local_settings() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
-=======
     sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
->>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
-=======
-    sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
->>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
 }
 
 do_ibus_install() {
@@ -138,15 +118,7 @@ do_ibus_install() {
 }
 
 do_nanumfont_install() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    apt-get purge utserver
-=======
     sudo apt-get purge utserver
->>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
-=======
-    sudo apt-get purge utserver
->>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
 }
 
 do_useful_apps_install() {
