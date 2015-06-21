@@ -29,7 +29,7 @@ calc_wt_size() {
 }
 
 intro() {
-    DO=$(whiptail --title "utorrent 설치도구)" --menu "옵션을 선택하여 주십시오." $WT_HEIGHT $WT_WIDTH $WT_MENU_HEIGHT --cancel-button Finish --ok-button Select \
+    DO=$(whiptail --title "utorrent 설치도구 (utorrent-config)" --menu "옵션을 선택하여 주십시오." $WT_HEIGHT $WT_WIDTH $WT_MENU_HEIGHT --cancel-button Finish --ok-button Select \
     "1 설치:" "utorrent 를 설치합니다" \
     "2 Etc:" "utorrent 다양한 옵션" \
     3>&1 1>&2 2>&3)
