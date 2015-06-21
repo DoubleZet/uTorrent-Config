@@ -104,9 +104,15 @@ do_update() {
 
     wget http://download.utorrent.com/linux/utorrent-server-3.0-25053.tar.gz
 <<<<<<< HEAD
+<<<<<<< HEAD
     tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
     chmod -R 777 /opt/utorrent-server-v3_0/
     ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
+=======
+    sudo tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
+    sudo chmod -R 777 /opt/utorrent-server-v3_0/
+    sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
+>>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
 =======
     sudo tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
     sudo chmod -R 777 /opt/utorrent-server-v3_0/
@@ -117,7 +123,11 @@ do_update() {
 
 do_local_settings() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
+=======
+    sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
+>>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
 =======
     sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
 >>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
@@ -129,7 +139,11 @@ do_ibus_install() {
 
 do_nanumfont_install() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     apt-get purge utserver
+=======
+    sudo apt-get purge utserver
+>>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
 =======
     sudo apt-get purge utserver
 >>>>>>> b4976c442d69f92f599c41f78784dec8a6d93bf0
@@ -194,11 +208,11 @@ enter_passwd
 intro
 while true; do
     FUN=$(whiptail --title "utorrent 다양한 옵션" --menu "설정 메뉴" $WT_HEIGHT $WT_WIDTH $WT_MENU_HEIGHT --cancel-button Finish --ok-button Select \
-    "1 utorrent 서버를 설치합니다.." \
-    "2 utorrent 서버를 실행시킵니다" \
-    "3 utorrent 서버를 브라우저에서 실행시킵니다" \
-    "4 utorrent 서버를 제거합니다" \
-    "5 utorretn 서버 설치파일을 디렉토리에서 제거합니다." \
+    "1 utorrent 설치" "utorrent 서버를 설치합니다..." \
+    "2 utorrent 서버 실행" "utorrent 서버를 실행시킵니다" \
+    "3 utorrent 크롬실행" "브라우저에서 서버를 실행시킵니다" \
+    "4 utorrent 제거" "서버를 제거합니다" \
+    "5 utorrent 설치파일 제거" "서버 설치파일을 디렉토리에서 제거합니다." \
     3>&1 1>&2 2>&3)
     RET=$?
     if [ $RET -eq 1 ]; then
