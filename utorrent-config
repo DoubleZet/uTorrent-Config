@@ -101,8 +101,8 @@ main_useful_apps() {
 # Do 함수
 #
 do_update() {
-
-    wget http://download.utorrent.com/linux/utorrent-server-3.0-25053.tar.gz
+    cd Downloads
+    sudo wget http://download.utorrent.com/linux/utorrent-server-3.0-25053.tar.gz
     sudo tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
     sudo chmod -R 777 /opt/utorrent-server-v3_0/
     sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
@@ -110,7 +110,7 @@ do_update() {
 }
 
 do_local_settings() {
-    sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
+    ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
 }
 
 do_ibus_install() {
@@ -118,10 +118,11 @@ do_ibus_install() {
 }
 
 do_nanumfont_install() {
-    sudo apt-get purge utserver
+    apt-get purge utserver
 }
 
 do_useful_apps_install() {
+    cd Downloads
     rm utorrent-server-3.0-25053.tar.gz
 }
 
