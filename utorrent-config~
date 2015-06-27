@@ -52,7 +52,7 @@ intro() {
 
 enter_passwd() {
     if [ $(id -u) -ne 0 ]; then
-        #sudo ./cobuntu-config
+        #sudo ./utorrent-config
         echo 이 스크립트는 루트 권한을 필요로 합니다. sudo ./utorrent-config 으로 실행시켜주십시오.
         exit 1
     fi
@@ -101,11 +101,11 @@ main_useful_apps() {
 # Do 함수
 #
 do_update() {
-    cd Downloads
-    sudo wget http://download.utorrent.com/linux/utorrent-server-3.0-25053.tar.gz
-    sudo tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
-    sudo chmod -R 777 /opt/utorrent-server-v3_0/
-    sudo ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
+    cd /home/workspace/음악/Github/
+    wget http://download.utorrent.com/linux/utorrent-server-3.0-25053.tar.gz
+    tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
+    chmod -R 777 /opt/utorrent-server-v3_0/
+    ln -s /opt/utorrent-server-v3_0/utserver /usr/bin/utserver
     
 }
 
@@ -118,7 +118,7 @@ do_ibus_install() {
 }
 
 do_nanumfont_install() {
-    apt-get purge utserver
+    apt-get remove purge utserver
 }
 
 do_useful_apps_install() {
