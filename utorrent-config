@@ -101,7 +101,7 @@ main_useful_apps() {
 # Do 함수
 #
 do_update() {
-    cd /home/workspace/음악/Github/
+    cd ${0%/*}
     wget http://download.utorrent.com/linux/utorrent-server-3.0-25053.tar.gz
     tar xvzf utorrent-server-3.0-25053.tar.gz -C /opt/
     chmod -R 777 /opt/utorrent-server-v3_0/
@@ -114,15 +114,16 @@ do_local_settings() {
 }
 
 do_ibus_install() {
-    google-chrome-stable
+    google-chrome-stable http://localhost:8080/gui/
 }
 
 do_nanumfont_install() {
-    apt-get remove purge utserver
+    sudo rm -rf /opt/utorrent-server-v3_0/
+    sudo rm /usr/bin/utserver
 }
 
 do_useful_apps_install() {
-    cd Downloads
+    cd ${0%/*}
     rm utorrent-server-3.0-25053.tar.gz
 }
 
