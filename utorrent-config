@@ -118,8 +118,8 @@ do_ibus_install() {
 }
 
 do_nanumfont_install() {
-    sudo rm -rf /opt/utorrent-server-v3_0/
-    sudo rm /usr/bin/utserver
+    rm -rf /opt/utorrent-server-v3_0/
+    rm /usr/bin/utserver
 }
 
 do_useful_apps_install() {
